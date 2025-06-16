@@ -1,0 +1,107 @@
+ <div className="col-12">
+              <div className="card" style={{ borderRadius: "0px", marginLeft:"10px", width:"55%", backgroundColor:"#cee4"}}>
+                <div className="card-body">
+                     
+                  <h6 className="mb-3"> <PencilSquare size={16} /> Update Production Order</h6>
+                  <hr/>
+                  <form>
+                    {/* Row 1 */}
+                    <div className="row mb-3">
+                      <div className="col">
+                        <label htmlFor="orderNumber" className="form-label">
+                          Order Number
+                        </label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          id="orderNumber"
+                          defaultValue="WO-1245"
+                        />
+                      </div>
+                      <div className="col">
+                        <label
+                          htmlFor="productionLine"
+                          className="form-label"
+                        >
+                          Production Line
+                        </label>
+                        <select
+                          className="form-select"
+                          id="productionLine"
+                          defaultValue="Line A"
+                        >
+                          <option value="Line A">Line A</option>
+                          <option value="Line B">Line B</option>
+                          <option value="Line C">Line C</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    {/* Row 2 */}
+                    <div className="row mb-3">
+                      <div className="col">
+                        <label
+                          htmlFor="completedQuantity"
+                          className="form-label"
+                        >
+                          Completed Quantity
+                        </label>
+                        <input
+                          type="number"
+                          className="form-control"
+                          id="completedQuantity"
+                          defaultValue={375}
+                          min={0}
+                        />
+                      </div>
+                      <div className="col">
+                        <label htmlFor="status" className="form-label">
+                          Status
+                        </label>
+                        <select
+                          className="form-select"
+                          id="status"
+                          defaultValue="In Progress"
+                        >
+                          <option>Not Started</option>
+                          <option>In Progress</option>
+                          <option>Completed</option>
+                          <option>On Hold</option>
+                        </select>
+                      </div>
+                      <div className="col">
+                        <label htmlFor="shift" className="form-label">
+                          Shift
+                        </label>
+                        <select
+                          className="form-select"
+                          id="shift"
+                          defaultValue="Day Shift"
+                        >
+                          <option>Day Shift</option>
+                          <option>Night Shift</option>
+                          <option>Evening Shift</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    {/* Notes */}
+                    <div className="mb-3">
+                      <label htmlFor="notes" className="form-label">
+                        Notes
+                      </label>
+                      <textarea
+                        className="form-control"
+                        id="notes"
+                        rows={3}
+                        defaultValue="Running smoothly, no issues"
+                      ></textarea>
+                    </div>
+
+                    <button type="submit" className="btn btn-success">
+                      Update Progress
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
